@@ -1,0 +1,14 @@
+.pergunt {
+  margin-bottom: 20px;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

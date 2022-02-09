@@ -1,0 +1,33 @@
+<!-- 
+  Partials
+
+  < %- include("path") % > - usado para importar partes de um código EJS para ser reutilizado em vários arquivos, chamado de Partials. 
+  Assim, tenho maior controle das alterações sem necessidade de alterar arquivos um a um.
+ -->
+<%- include("partials/header.ejs")%>
+<body>
+
+  <header>
+    <%- include("partials/navbar.ejs") %>
+  </header>
+  <main class="container">
+    
+    <div class="card">
+      <div class="card-header"><h3>Realizar pergunta</h3></div>
+      <div class="card-body">
+        <form method="POST" action="/salvarpergunta">
+          <label>Título</label>
+          <!-- name="nome" - este atributo é usado para enviar os dados via rota de requisição para o node (ex.: req.body.titulo) -->
+          <input type="text" placeholder="Título" class="form-control" name="titulo"/><br/>
+          <label>Pergunta</label>
+          <textarea placeholder="Insira sua pergunta." class="form-control" name="pergunta"></textarea><br/>
+          <button href="/views/pergunta.ejs" class="btn btn-primary">Perguntar</button>
+        </form>
+      </div>
+    </div>
+  
+  </main>
+  <footer></footer>
+
+</body>
+<%- include("partials/footer.ejs") %> 
